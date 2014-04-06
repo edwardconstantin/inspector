@@ -1,0 +1,29 @@
+<form class="content-fullscreen login" ng-submit="login()">
+
+  <div class="logo-wrapper">
+    <img src="images/Kier.png">
+  </div>
+
+
+  <div class="login-input-wrapper">
+    <label class="input-row">
+      <div class="input-icon username"></div>
+      <input class="tg" type="text" placeholder="Username" required ng-model="username" value="KJAMES"></input>
+    </label>
+
+    <label class="input-row">
+      <div class="input-icon password"></div>
+      <input class="tg" type="password" placeholder="Password" required ng-model="password" value="Kiermg123"></input>
+    </label>
+  </div>
+
+  <div class="button-group">
+    <button class="btn grey osr login-button" type="submit">LOGIN</button>
+    <!-- <a href="#/WorkOrderList" class="btn grey osr login-button">LOGIN</a> -->
+
+  </div>
+
+  <div class="version osr"><span>version: </span> {{ version }}</div>
+
+</form>
+

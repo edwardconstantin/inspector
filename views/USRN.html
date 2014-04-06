@@ -1,0 +1,125 @@
+<mgheader title="USRN LIST"></mgheader>
+
+<div class="content grey-background">
+
+    <div class="card flex">
+        <div class="card-header bg-turq white">
+            <div class="card-header-title osb">
+                {{ workOrder.data.route }}
+            </div>
+        </div>
+
+        <div class="usrn-switch-row">
+            <div class="usrn-switch-label osr">Sorted By:</div>
+           <!-- <div class="usrn-switch" ng-class="{ 'usrn-switch-alpha': sort == 'usrnLocation', 'usrn-switch-maximo': sort == 'USRN' }" ng-click="toggleSort()"></div>  -->
+            <div class="usrn-switch" ng-class="{ 'usrn-switch-alpha': sort == 'usrnLocation', 'usrn-switch-maximo': sort == 'usrn' }" ng-click="toggleSort()"></div>
+        </div>
+
+        <div class="card-header bg-turq white">
+            <div class="card-header-title osb">
+                Work Order No:
+                <span class="osr">{{ workOrder.data.wonum }}</span>
+            </div>
+        </div>
+
+        <mgscroll>
+            <usrn ng-repeat="usrn in workOrder.usrns | orderBy:sort | orderBy:sort:reverse" ></usrn>
+        </mgscroll>
+    </div>
+    <div class="button-group">
+        <div class="button-group-item btn-act-abort button-abort" ng-click="onAbort()"></div>
+        <div class="button-group-item btn-act-postpone button-postpone" ng-click="onPostpone()"></div>
+        <div class="button-group-item btn-act-complete button-complete" ng-click="onComplete()"></div>
+    </div>
+</div>
+
+<mgdialog title="SELECT ABORT REASON" header-class="bg-darkred" control="abortDialog">
+        <div class="tg grey">
+            <div class="select-row" ng-click="abortDialog.data.reason = 'postpone';">
+                <div class="select-box-wrapper"><div class="select-box" ng-class="{ 'checked': abortDialog.data.reason == 'postpone' }"></div></div>
+                <div class="flex select-label">Postpone</div></div>
+            <div class="select-row" ng-click="abortDialog.data.reason = 'snow';">
+                <div class="select-box-wrapper"><div class="select-box" ng-class="{ 'checked': abortDialog.data.reason == 'snow' }"></div></div>
+                <div class="flex select-label">Unable to inspect due to snow</div></div>
+            <div class="select-row" ng-click="abortDialog.data.reason = 'flooding';">
+                <div class="select-box-wrapper"><div class="select-box" ng-class="{ 'checked': abortDialog.data.reason == 'flooding' }"></div></div>
+                <div class="flex select-label">Unable to inspect due to flooding</div></div>
+            <div class="select-row" ng-click="abortDialog.data.reason = 'utilities';">
+                <div class="select-box-wrapper"><div class="select-box" ng-class="{ 'checked': abortDialog.data.reason == 'utilities' }"></div></div>
+                <div class="flex select-label">Unable to inspect due to utilities</div></div>
+            <div class="select-row" ng-click="abortDialog.data.reason = 'closure';">
+                <div class="select-box-wrapper"><div class="select-box" ng-class="{ 'checked': abortDialog.data.reason == 'closure' }"></div></div>
+                <div class="flex select-label">Unable to inspect due to road closure</div></div>
+            <div class="select-row" ng-click="abortDialog.data.reason = 'recalled';">
+                <div class="select-box-wrapper"><div class="select-box" ng-class="{ 'checked': abortDialog.data.reason == 'recalled' }"></div></div>
+                <div class="flex select-label">Unable to inspect - recalled to depot</div></div>
+            <div class="select-row" ng-click="abortDialog.data.reason = 'weather';">
+                <div class="select-box-wrapper"><div class="select-box" ng-class="{ 'checked': abortDialog.data.reason == 'weather' }"></div></div>
+                <div class="flex select-label">Unable to inspect due to severe weather</div></div>
+        </div>
+        <div class="button-group">
+            <button class="btn red flex-container" ng-click="abortDialog.data = {'cancel':true}; abortDialog.done()">CANCEL</button>
+            <button class="btn green flex-container" ng-click="onAbortOk(abortDialog.data.reason)">OK</button>
+        </div>
+</mgdialog>
+
+<mgdialog title="RESUME" header-class="bg-turq" control="usrnResumeDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            <p class="osr">Do you want to resume?<p>
+            <div class="button-group">
+                <button class="btn red flex-container" ng-click="usrnResumeDialog.data = false; usrnResumeDialog.done()">NO <div class="no-icon"></div></button>
+                <button class="btn green flex-container" ng-click="usrnResumeDialog.data = true; usrnResumeDialog.done()">YES <div class="yes-icon"></div></button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+
+<mgdialog title="NO DEFECT" header-class="bg-turq" control="noDefectDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            <p class="osr">Are you sure there are no safety defects present?</p>
+            <div class="button-group">
+                <button class="btn red flex-container" ng-click="noDefectDialog.data = false; noDefectDialog.done()">NO <div class="no-icon"></div></button>
+                <button class="btn green flex-container" ng-click="noDefectDialog.data = true; noDefectDialog.done()">YES <div class="yes-icon"></div></button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+
+<mgdialog title="OUTSTANDING USRNS" header-class="bg-turq" control="notCompleteDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            The work order could not be completed because there are outstanding USRNs
+            <div class="button-group">
+                <button class="btn green flex-container" ng-click="notCompleteDialog.done()">OK</button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+
+<mgdialog title="COMPLETE USRN" header-class="bg-turq" control="usrnCompleteNotesDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            Enter any additional notes below<br /><br />
+            <div class="positioned alt-textarea-container">
+                <div class="dummy-comments osb silver" ng-show="!isUsrnCompleteDialogFocused && !usrnCompleteNotesDialog.data.notes"></div>
+                <textarea class="osr" ng-model="usrnCompleteNotesDialog.data.notes" ng-focus="isUsrnCompleteDialogFocused=true" ng-blur="isUsrnCompleteDialogFocused=false"></textarea>
+            </div>
+            <div class="button-group">
+                <button class="btn red flex-container" ng-click="usrnCompleteNotesDialog.close()">CANCEL</button>
+                <button class="btn green flex-container" ng-click="usrnCompleteNotesDialog.done()">DONE</button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+
+<div class="footer">
+    <div class="left">
+        <!-- TODO: UPDATE HREF -->
+            <a href="" ng-click="goBack()">
+            <div class="back-icon"></div>
+            <div class="back-text white osr">BACK</div>
+      </a>
+    </div>
+</div>

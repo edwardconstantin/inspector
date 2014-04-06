@@ -1,0 +1,93 @@
+.header-bar {
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  background-color: rgb(61, 61, 61);
+  text-align: center;
+}
+.header-bar .left,
+.header-bar .right {
+  position: absolute;
+  width: 54px;
+  height: 45px;
+  top: 0;
+  margin: 8px 0;
+}
+.header-bar .left {
+  left: 0;
+}
+.header-bar .right {
+  right: 0;
+}
+
+.header-bar .header-text {
+  text-overflow: ellipsis;
+  margin: 0 54px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.header-bar .center {
+  height: 45px;
+  line-height: 45px;
+  margin: 5px auto;
+}
+
+
+
+.logout-icon {
+  background: url("../images/logout-icon.png") no-repeat;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+  margin-left: 14px;
+  margin-bottom: 4px;
+}
+
+.logout-text {
+  font-size: 63%;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 2s linear infinite;
+}
+
+.sync-icon {
+  -webkit-backface-visibility: hidden;
+  background-image: url("../images/sync.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 21px;
+  line-height: 21px;
+  margin-left: 14px;
+  margin-bottom: 4px;
+  /*-webkit-transform-origin: 50% 42%;*/
+}
+.sync-icon.syncing {
+  background-image: url("../images/sync-inprogress.png");
+  -webkit-animation: rotating 2s linear infinite;
+}
+.sync-icon.no-connection {
+
+}
+.sync-icon.waiting {
+  background-image: url("../images/sync-waiting.png");
+}
+.sync-icon.failed {
+  background-image: url("../images/sync-failed.png");
+}
+
+
+.sync-text {
+  font-size: 63%;
+}

@@ -1,0 +1,75 @@
+<div class="card flex">
+
+    <div class="defect-container" ng-repeat="defect in defects">
+        <div class="card-container">
+            <div class="defect-header bg-turq white card-header-title osr">
+                {{defect.data.defectType[0].choice}}
+            </div>
+            <div class="usrn-summary osr darkgrey">
+                <div><span class="blockwidth">Fault Type:</span>
+                    <span class="clippedDetails">{{defect.data.defectType[0].choice}}</span></div>
+                <div><span class="blockwidth">Defect Type:</span>
+                    <span class="clippedDetails">{{defect.data.defectType[1].choice}}</span></div>
+                <div><span class="blockwidth">Coordinates:</span>
+                    <span class="clippedDetails">{{defect.data.xCoordinate}}, {{defect.data.yCoordinate}}</span></div>
+                <div class="defect-details">
+                        <div class="item">
+                            <div class="left">Priority:</div>
+                            <div class="right">{{defect.data.defectType[2].choice}}</div>
+                        </div>
+                        <div class="item">
+                            <div class="left">Road Speed:</div>
+                            <div class="right">{{defect.data.defectType[3].choice}}</div>
+                        </div>
+                        <div class="item">
+                            <div class="left">Quantity:</div>
+                            <div class="right">{{defect.data.defectDetails.numDefects}}</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="left">Depth:</div>
+                            <div class="right">{{defect.data.defectDetails.depth}}mm</div>
+                        </div>
+                        <div class="item">
+                            <div class="left">Width:</div>
+                            <div class="right">{{defect.data.defectDetails.width}}mm</div>
+                        </div>
+                        <div class="item">
+                            <div class="left">Length:</div>
+                            <div class="right">{{defect.data.defectDetails.len}}mm</div>
+                        </div>
+                          <div class="item">
+                            <div class="left">Traffic Management:</div>
+                            <div class="details-clipped-text right">{{defect.data.defectType[4].choice}}</div>
+                        </div>
+                </div>
+           
+                <!-- <div class="clipped-text">Traffic Management: {{defect.data.defectType[4].choice}}</div>  -->
+
+                <div class="item summary-details">
+                    <div class="details-summary-title item osr">Details:</div>
+                    <div class="content-wrapper">
+                        <div class="osr details-summary-content">
+                            {{defect.data.additionalDetails}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="defect-images">
+                    <div class="image-container" ng-repeat="photo in defect.data.photos">
+                        <div class="photo-thumb" style="background: url({{photo.localRef}}) no-repeat center center; background-size:133px 100px;"></div>
+                        <div class="photo-label ellipsis osr">{{ photo.description }}</div>
+                    </div>
+                </div>
+
+
+                <div></div>
+                <!--
+                <div class="button-group">
+                    <div class="btn green" ng-click="">OPEN DEFECT</div>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</div>

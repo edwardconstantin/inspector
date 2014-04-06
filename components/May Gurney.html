@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://127.0.0.1:8000/#/DefectType/5249664a6ac0a9b4d3c40b4f/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><link type="text/css" rel="stylesheet" href="./May Gurney_files/css"><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style div,.gm-style span,.gm-style label,.gm-style a{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400}.gm-style div,.gm-style span,.gm-style label{text-decoration:none}.gm-style img{border:0;padding:0;margin:0}</style>
+    <meta charset="utf-8">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>May Gurney</title>
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/reset.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/bootstrap.custom.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/fonts.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/colors.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/main.css">
+
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/google-map.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/dialog.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/btn.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/tabs.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/section.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/action.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/header.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/footer.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/login.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/usrn.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/expandable.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/defects.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/details.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/location.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/image-swiper.css">
+
+    <!-- For use in the browser to show the camera feed -->
+    <link rel="stylesheet" href="http://127.0.0.1:8000/styles/camera.css">
+    <!-- endbuild -->
+
+    <!-- GOOGLE MAPS API WITH ACCOUNT KEY -->
+    <!-- TODO: CHANGE API KEY! TODO: DO WE NEED SENSOR? -->
+    <script type="text/javascript" src="./May Gurney_files/js" style=""></script><style type="text/css"></style><script src="./May Gurney_files/main.js" type="text/javascript"></script>
+
+<!--
+    <script src="http://192.168.46.44:8080/target/target-script-min.js#anonymous"></script>
+-->
+
+  <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/{common,util,stats}.js"></script><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/{map}.js"></script><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/{onion}.js"></script><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/{controls}.js"></script><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/ViewportInfoService.GetViewportInfo"></script><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/{marker}.js"></script><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/ViewportInfoService(1).GetViewportInfo"></script><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/QuotaService.RecordEvent"></script><script type="text/javascript" charset="UTF-8" src="./May Gurney_files/QuotaService(1).RecordEvent"></script></head>
+
+  <body class="ng-scope">
+
+    <div class="container" ng-view=""><mgheader title="Defect Type" class="ng-isolate-scope ng-scope"><div class="header-bar">
+
+    <a href="http://127.0.0.1:8000/#/Login">
+      <div class="left">
+        <div class="logout-icon"></div>
+        <div class="logout-text silver osr">LOGOUT</div>
+      </div>
+    </a>
+
+    <div class="center">
+      <div class="header-text white tg ng-binding">Defect Type</div>
+    </div>
+
+    <div class="right" ng-click="update()">
+      <div class="sync-icon none"></div>
+      <div class="sync-text silver osr">SYNC</div>
+    </div>
+
+</div>
+</mgheader>
+
+<div class="content ng-scope">
+
+    <!-- btn navigation -->
+    <div class="buttonbar grey-bg-top">
+        <div class="button ng-isolate-scope ng-scope" mgphoto="">
+            <div class="bg-orange defect-icon photo-btn">
+                <p class-="btn-text">Add Photo</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-green defect-icon location-btn">
+                <p class-="btn-text">Location</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-darkred defect-icon defect-type-btn">
+                <p class-="btn-text">Defect Type</p>
+            </div>
+        </div>
+        <div class="button" ng-click="updateStatus()">
+            <div class="bg-lightgrey defect-icon defect-details-btn">
+                <p class-="btn-text">Details</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-lightgrey defect-icon defect-complete">
+                <p class-="btn-text">Complete</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-wrapper" style="overflow: hidden;">
+    <div class="scroll-scroller" ng-transclude="" style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate3d(0px, 0px, 0);">
+
+        <div class="defects ng-scope">
+            <!-- ngRepeat: defect in defects.faults --><defect ng-repeat="defect in defects.faults">
+ <p class="title-arrow defect-title tg ng-binding" ng-click="defectSelection($index)" ng-class="{&#39;title-arrow-down&#39;: isContentVisible, &#39;title-arrow&#39;: !isContentVisible,
+                    &#39;defect-title-selected&#39; : defectHeader, &#39;defect-title&#39; : !defectHeader}">
+                    Fault Type
+    </p>
+
+    <!-- ngRepeat: option in defect.options --><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Carriageway Inspections" value="Carriageway Inspections" class="defect-type-txt osr ng-binding"> Carriageway Inspections </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Footwary and Kerb Inspections" value="Footwary and Kerb Inspections" class="defect-type-txt osr ng-binding"> Footwary and Kerb Inspections </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Furniture, Vegetation and Structural" value="Furniture, Vegetation and Structural" class="defect-type-txt osr ng-binding"> Furniture, Vegetation and Structural </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div>
+
+</defect><defect ng-repeat="defect in defects.faults">
+ <p class="title-arrow defect-title tg ng-binding" ng-click="defectSelection($index)" ng-class="{&#39;title-arrow-down&#39;: isContentVisible, &#39;title-arrow&#39;: !isContentVisible,
+                    &#39;defect-title-selected&#39; : defectHeader, &#39;defect-title&#39; : !defectHeader}">
+                    Defect Type
+    </p>
+
+    <!-- ngRepeat: option in defect.options --><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="boolean" class="ng-scope">
+
+                    <p class="defect-options switch">
+
+                        <label for="Failed Repairs" value="Failed Repairs" class="defect-type-txt osr ng-binding"> Failed Repairs </label>
+
+                            </p><div class="boolean">
+                                <span class="left">
+                                <p class="osr booleanSelect left">Yes</p>
+                                <p ng-click="optionBoolean($index, option.title)" value="yes" ng-class="{ &#39;yesRadioBtnSelected&#39;: yesNo, &#39;yesRadioBtn&#39;: !yesNo }" class="yesRadioBtn right">&nbsp;</p>
+                                <p class="clear"></p>
+                                </span>
+
+                            <span class="right">
+                                <p class="osr booleanSelect left ">No</p>
+                                <p ng-click="optionBoolean($index, option.title)" value="no" ng-class="{ &#39;noRadioBtnSelected&#39;: !yesNo, &#39;noRadioBtn&#39;: yesNo }" class="noRadioBtn right noRadioBtnSelected">&nbsp;</p>
+                                </span>
+
+                                <p class="clear"></p>
+
+                            </div>
+
+                         <!-- <span class="clear"></span> -->
+                    <p></p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="filter" class="ng-scope">
+
+                    <!-- ngRepeat: item in myArray -->
+
+                </span></div>
+    </div>
+
+</defect><defect ng-repeat="defect in defects.faults">
+ <p class="title-arrow defect-title tg ng-binding" ng-click="defectSelection($index)" ng-class="{&#39;title-arrow-down&#39;: isContentVisible, &#39;title-arrow&#39;: !isContentVisible,
+                    &#39;defect-title-selected&#39; : defectHeader, &#39;defect-title&#39; : !defectHeader}">
+                    Priority
+    </p>
+
+    <!-- ngRepeat: option in defect.options --><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="P2" value="P2" class="defect-type-txt osr ng-binding"> P2 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="P2+" value="P2+" class="defect-type-txt osr ng-binding"> P2+ </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="P2 Cluster" value="P2 Cluster" class="defect-type-txt osr ng-binding"> P2 Cluster </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="P3" value="P3" class="defect-type-txt osr ng-binding"> P3 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="dropDown" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionDropDown($index, value)">
+
+                        <label for="P4 - 3rd Party / Private Land" value="P4 - 3rd Party / Private Land" class="defect-type-txt osr ng-binding"> P4 - 3rd Party / Private Land </label>
+
+                    <!-- TO DO: BUG, ARROW NOT RENDERING -->
+                            <span ng-class="{&#39;priority-arrow-down&#39;: visible, &#39;priority-arrow&#39;: !visible}" class="priority-arrow">&nbsp;</span>
+                    <!-- Priority options level 2-->
+                        </p><!-- ngRepeat: state in option.states --><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Affinity Water" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Affinity Water
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="British Telecom (BT)" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 British Telecom (BT)
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="National Grid Gas" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 National Grid Gas
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Southern Gas Networks (SGN)" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Southern Gas Networks (SGN)
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="South East Water (SEW)" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 South East Water (SEW)
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Southern Electric (SElec)" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Southern Electric (SElec)
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Southern Water (SW)" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Southern Water (SW)
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Sutton &amp; East Surrey Water (S &amp; ESW)" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Sutton &amp; East Surrey Water (S &amp; ESW)
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Thames Water" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Thames Water
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="UK Power Networks (UKPN)" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 UK Power Networks (UKPN)
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Virgin Media (Cable TV)" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Virgin Media (Cable TV)
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Other Utility" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Other Utility
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div><div ng-show="visible" ng-repeat="state in option.states " class="ng-scope" style="display: none;">
+
+                            <p value="Private Vegetation" class="defect-options-lv2 osr ng-binding" ng-click="optionSelection($index, value)">
+                                 Private Vegetation
+
+                              <span ng-class="{ &#39;radio-selected-lv2&#39;: faultOption == $index, &#39;radio-lv2&#39;: faultOption != $index }" class="radio radio-lv2">&nbsp;</span>
+
+                            <!--  <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span> -->
+                            </p>
+                        </div>
+
+                        <span class="clear"></span>
+                    <p></p>
+
+                </span></div>
+    </div>
+
+</defect><defect ng-repeat="defect in defects.faults">
+ <p class="title-arrow defect-title tg ng-binding" ng-click="defectSelection($index)" ng-class="{&#39;title-arrow-down&#39;: isContentVisible, &#39;title-arrow&#39;: !isContentVisible,
+                    &#39;defect-title-selected&#39; : defectHeader, &#39;defect-title&#39; : !defectHeader}">
+                    Road Speed
+    </p>
+
+    <!-- ngRepeat: option in defect.options --><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="20" value="20" class="defect-type-txt osr ng-binding"> 20 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="30" value="30" class="defect-type-txt osr ng-binding"> 30 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="40" value="40" class="defect-type-txt osr ng-binding"> 40 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="50" value="50" class="defect-type-txt osr ng-binding"> 50 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="60" value="60" class="defect-type-txt osr ng-binding"> 60 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="display: none;">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="70" value="70" class="defect-type-txt osr ng-binding"> 70 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div>
+
+</defect><defect ng-repeat="defect in defects.faults">
+ <p class="tg ng-binding title-arrow-down defect-title" ng-click="defectSelection($index)" ng-class="{&#39;title-arrow-down&#39;: isContentVisible, &#39;title-arrow&#39;: !isContentVisible,
+                    &#39;defect-title-selected&#39; : defectHeader, &#39;defect-title&#39; : !defectHeader}">
+                    Traffic Management
+    </p>
+
+    <!-- ngRepeat: option in defect.options --><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Standard Chapter 8" value="Standard Chapter 8" class="defect-type-txt osr ng-binding"> Standard Chapter 8 </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="2-Way Signals" value="2-Way Signals" class="defect-type-txt osr ng-binding"> 2-Way Signals </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Multi-way Signals" value="Multi-way Signals" class="defect-type-txt osr ng-binding"> Multi-way Signals </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Lane Closure" value="Lane Closure" class="defect-type-txt osr ng-binding"> Lane Closure </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Road Closure" value="Road Closure" class="defect-type-txt osr ng-binding"> Road Closure </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Advanced TM" value="Advanced TM" class="defect-type-txt osr ng-binding"> Advanced TM </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="No Parking Cones" value="No Parking Cones" class="defect-type-txt osr ng-binding"> No Parking Cones </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Restricted Working" value="Restricted Working" class="defect-type-txt osr ng-binding"> Restricted Working </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Priority Signs" value="Priority Signs" class="defect-type-txt osr ng-binding"> Priority Signs </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Stop / Go Boards" value="Stop / Go Boards" class="defect-type-txt osr ng-binding"> Stop / Go Boards </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div><div ng-show="isContentVisible" data-ng-repeat="option in defect.options" class="ng-scope" style="">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <!-- ngSwitchWhen: single -->
+
+
+            <!-- YES / NO -->
+            <!-- ngSwitchWhen: boolean -->
+           <!--      <span ng-switch-when="boolean">
+
+                    <p class="defect-options">
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+
+                            <span class="osr booleanSelect">No</span>
+                            <span ng-click="optionBoolean($index, 0)" value="no" ng-class="{ 'radio-selected': repairs == 0, 'radio': repairs != 0 }" class="radio">&nbsp;</span>
+
+
+
+                         <span class="osr booleanSelect">Yes</span>
+                            <span  ng-click="optionBoolean($index, 1)" value="yes" ng-class="{ 'radio-selected': repairs == 1, 'radio': repairs != 1 }" class="radio">&nbsp;</span> -->
+
+                       <!--   </span> -->
+<!--
+                        <span class="clear"></span>
+                    </p>
+
+                </span> -->
+
+            <!-- drop down menu -->
+                <!-- ngSwitchWhen: dropDown -->
+
+            <!-- DEFECTS FILTER TYPE -->
+                <!-- ngSwitchWhen: filter -->
+
+            <span ng-switch-when="single" class="ng-scope">
+
+                    <p class="defect-options" ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="Give and Take" value="Give and Take" class="defect-type-txt osr ng-binding"> Give and Take </label>
+
+                        <span ng-class="{ &#39;radio-selected&#39;: faultOption == $index, &#39;radio&#39;: faultOption != $index }" class="radio">&nbsp;</span>
+
+                        <span class="clear"></span>
+                    </p>
+
+                </span></div>
+    </div>
+
+</defect>
+        </div>
+
+        <div class="defect-type image-swiper grey-background ng-scope">
+            <div class="image-swipe-inner">
+                <!-- ngRepeat: photo in workOrder.photos -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+<div class="footer ng-scope">
+    <div class="left">
+        <a href="http://127.0.0.1:8000/#/USRN/">
+            <div class="back-icon"></div>
+            <div class="back-text silver osr">BACK</div>
+        </a>
+    </div>
+    <div class="button-group">
+        <div class="btn red" ng-click="abort()">ABORT</div>
+    </div>
+    <div class="right">
+        <a href="http://127.0.0.1:8000/#/Summary/">
+            <div class="summary-menu-btn"></div>
+        </a>
+    </div>
+</div>
+
+</div>
+
+    <!-- libs -->
+
+    <!-- nodejs url/path lib and deps -->
+    <script src="./May Gurney_files/querystring.js"></script>
+    <script src="./May Gurney_files/punycode.js"></script>
+    <script src="./May Gurney_files/url.js"></script>
+    <script src="./May Gurney_files/path.js"></script>
+    <!-- end: node js url/path lib and deps -->
+
+    <!-- <script src="components/hammer.js"></script> -->
+    <script src="./May Gurney_files/sha1.js"></script>
+    <script src="./May Gurney_files/moment.min.js"></script>
+    <script src="./May Gurney_files/spark-md5.js"></script>
+    <script src="./May Gurney_files/Lawnchair.js"></script>
+    <script src="./May Gurney_files/angular.js"></script>
+    <!-- <script src="components/fastclick.js"></script> -->
+    <!-- end: libs -->
+
+    <script>
+        (function() {
+            var script = document.createElement("script");
+            if(navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+                script.src = "components/cordova/cordova.js";
+                document.body.appendChild(script);
+            }
+            else {
+                var cameraScript = document.createElement("script");
+                script.src = "components/phonegap-desktop/phonegap-desktop.js";
+                cameraScript.src = "js/Camera.js";
+                document.body.appendChild(script);
+                document.body.appendChild(cameraScript);
+            }
+        })();
+    </script><script src="./May Gurney_files/phonegap-desktop.js"></script><script src="./May Gurney_files/Camera.js"></script>
+
+    <!-- plugin script files -->
+    <script src="./May Gurney_files/filehasher.js"></script>
+    <script src="./May Gurney_files/fileopener.js"></script>
+    <script src="./May Gurney_files/version.js"></script>
+    <!-- end: plugin script files -->
+
+    <script src="./May Gurney_files/ui-bootstrap.js"></script>
+    <script src="./May Gurney_files/iscroll-lite.js"></script>
+    <script src="./May Gurney_files/feedhenry.js"></script>
+    <script src="./May Gurney_files/sync-cli.js"></script>
+
+    <!-- build:js scripts/scripts.js -->
+
+    <script src="./May Gurney_files/App.js"></script>
+
+    <!-- Services -->
+    <script src="./May Gurney_files/SyncManager.js"></script>
+    <script src="./May Gurney_files/WorkOrderManager.js"></script>
+    <script src="./May Gurney_files/DefectManager.js"></script>
+    <script src="./May Gurney_files/Logger.js"></script>
+    <script src="./May Gurney_files/GPSService.js"></script>
+    <script src="./May Gurney_files/Attachments.js"></script>
+    <script src="./May Gurney_files/Network.js"></script>
+    <script src="./May Gurney_files/Navigation.js"></script>
+    <script src="./May Gurney_files/Auth.js"></script>
+
+    <!-- Controllers -->
+    <script src="./May Gurney_files/Login.js"></script>
+    <script src="./May Gurney_files/WorkOrderList.js"></script>
+    <script src="./May Gurney_files/USRN.js"></script>
+    <script src="./May Gurney_files/Location.js"></script>
+    <script src="./May Gurney_files/DefectType.js"></script>
+    <script src="./May Gurney_files/DefectDetails.js"></script>
+    <script src="./May Gurney_files/RaiseDefect.js"></script>
+    <script src="./May Gurney_files/Summary.js"></script>
+    <script src="./May Gurney_files/USRNSummary.js"></script>
+    <script src="./May Gurney_files/Location.js"></script>
+    <script src="./May Gurney_files/LocationMap.js"></script>
+
+    <!-- Directives -->
+    <script src="./May Gurney_files/WorkOrderListItem.js"></script>
+    <script src="./May Gurney_files/MGHeader.js"></script>
+    <script src="./May Gurney_files/MGScroll.js"></script>
+    <script src="./May Gurney_files/RiskAssessment.js"></script>
+    <script src="./May Gurney_files/MGDialog.js"></script>
+    <script src="./May Gurney_files/MGAction.js"></script>
+    <script src="./May Gurney_files/Expandable.js"></script>
+    <script src="./May Gurney_files/Swipeable.js"></script>
+    <script src="./May Gurney_files/Attachment.js"></script>
+    <script src="./May Gurney_files/USRN(1).js"></script>
+    <script src="./May Gurney_files/Summary(1).js"></script>
+    <script src="./May Gurney_files/Defect.js"></script>
+    <script src="./May Gurney_files/Details.js"></script>
+    <script src="./May Gurney_files/USRNSummary(1).js"></script>
+    <script src="./May Gurney_files/Textarea.js"></script>
+    <script src="./May Gurney_files/GoogleMap.js"></script>
+    <script src="./May Gurney_files/Focus.js"></script>
+    <script src="./May Gurney_files/Blur.js"></script>
+    <script src="./May Gurney_files/MGPhoto.js"></script>
+    <script src="./May Gurney_files/FileTransfer.js"></script>
+
+    <script>
+
+        document.addEventListener("deviceready", function() {
+            function bootstrap() {
+                angular.bootstrap(document.body, ['mgApp']);
+            }
+
+            bootstrap();
+
+            // "host": "http://127.0.0.1:8000",
+            // "appid": "PWmwi2CpYGevbZsZyat2FW5o",
+            // "appkey": "db32cc1261fa12e29ade54acab99504b014529c9"
+
+            // var fh_config = {"appid":"_V58x1l9xm1iRTvd5b_MDCa6","appkey":"3c8cdfda6a9db304232f6379e94ec0b25f4d3a10","host":"https://ucb.appsdeveloper.o2.co.uk","mode":"dev"};
+
+            // $fh.init(fh_config, function(){
+            //     console.log( ' success init ' );
+            //     UCB.loadingScreen.hide(null, 3000);
+            // }, function(){
+
+
+            // $fh.init({
+            //     "host": "https://maygurney.feedhenry.com",
+            //     "appid": "o4qh_Yb1bzlyARIBVQG4Juee",
+            //     "appkey": "bcc60fe2bd7cabab346de8974c58a540d847fdba",
+            //     "mode": "dev"
+            // }, function(res) {
+            //     bootstrap();
+            //     console.log("$fh initialised");
+            // }, function(msg, err) {
+            //     bootstrap();
+            //     console.log("$fh failed to initialise");
+            // });
+
+        }, false);
+
+        // FastClick.attach(document.body);
+
+
+
+    </script>
+    <!-- endbuild -->
+
+
+
+
+<div style="position: absolute; left: -1920px; top: -1080px; width: 1920px; height: 1080px; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px;"><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;">Imagery ©2013 DigitalGlobe, Getmapping plc, Infoterra Ltd &amp; Bluesky, The GeoInformation Group</div></div></div><div style="position: absolute; left: -1920px; top: -1080px; width: 1920px; height: 1080px; visibility: hidden;"></div><div style="position: absolute; left: -1920px; top: -1080px; width: 1920px; height: 1080px; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px;"><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;">Imagery ©2013 DigitalGlobe, Getmapping plc, Infoterra Ltd &amp; Bluesky, The GeoInformation Group</div></div></div><div style="position: absolute; left: -1920px; top: -1080px; width: 1920px; height: 1080px; visibility: hidden;"></div></body></html>

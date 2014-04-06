@@ -1,0 +1,88 @@
+.bg-black {
+  background-color: rgb(17, 17, 17);
+}
+
+.bg-turq {
+  background-color: #009daf;
+}
+
+.bg-darkgrey {
+  background-color: rgb(61, 61, 61);
+}
+
+.bg-grey {
+  background-color: rgb(85, 85, 85);
+}
+
+.bg-lightgrey {
+  background-color: rgb(179, 179, 179);
+}
+
+.bg-lightred {
+  background-color: rgb(223, 79, 79);
+}
+
+.bg-vlightred {
+  background-color: rgb(223, 147, 146);
+}
+
+.bg-darkred {
+  background-color: rgb(196, 59, 58);
+}
+
+.bg-green {
+  background-color: rgb(151, 206, 104);
+}
+
+.bg-lightgreen {
+  background-color: rgb(185, 207, 165);
+}
+
+.bg-orange {
+  background-color: rgb(233, 153, 51);
+}
+
+.bg-lightorange {
+  background-color: rgb(233, 192, 138);
+}
+
+.bg-blue {
+  background-color: #c7e9eb;
+}
+
+
+.white {
+  color: rgb(255, 255, 255);
+}
+
+.whiter {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.darkgrey {
+  color: rgb(61, 61, 61);
+}
+
+.grey {
+  color: rgb(85, 85, 85);
+}
+
+.silver {
+  color: rgb(138, 153, 153);
+}
+
+.darkred {
+  color: rgb(196, 59, 58);
+}
+
+.darkgreen {
+  color: rgb(106, 129, 43);
+}
+.orange {
+  color: rgb(233, 153, 51);
+}
+
+.green {
+  color: rgb(151, 206, 104);
+}
+

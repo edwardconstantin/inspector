@@ -1,0 +1,75 @@
+/* login */
+
+.login {
+  text-align: center;
+  background-image: url("../images/login-bg.png"), -webkit-linear-gradient(#fff 0%, #b2d5f4 100%);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.logo-wrapper {
+  margin: 4em 0 0 2em;
+}
+
+.logo-wrapper img {
+  width: 14em;
+  height: auto;
+}
+
+
+.login-input-wrapper {
+  display: inline-block;
+  margin-top: 3em;
+}
+
+.input-row {
+  display: inline-block;
+  margin-top: 1em;
+  overflow: hidden;
+  font-size: 0.9em;
+}
+
+.input-row .input-icon.password {
+  background-image: url("../images/password-icon.png");
+}
+.input-row .input-icon.username {
+  background-image: url("../images/username-icon.png");
+}
+.input-icon {
+  float: left;
+}
+.input-row .input-icon {
+/*  float:left;*/
+
+  width: 3.2em;
+  height: 3.2em;
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  border-radius: 0.3em 0 0 0.3em;
+  background-color: #298C9A;
+}
+
+.input-row input {
+  display: inline-block;
+  height: 3em;
+  width: 12em;
+  margin: 0;
+  padding: 0 0 0 0.2em;
+  border-width: 0.1em;
+
+  font-size: 1em;
+}
+
+.login-button {
+  width: 204px;
+  padding-left: 75px; /* Awful hack to center text*/
+}
+
+.version {
+  margin-top: 2em;
+
+  font-size: 0.8em;
+}

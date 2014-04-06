@@ -1,0 +1,49 @@
+<mgheader title="Location"></mgheader>
+
+<div class="content" > <!-- data-ng-controller="LocationMap" class="content nativescroll" -->
+<!--    <div class="google-map flex" events="mapEvents" center="center" draggable="true" dragging="dragging" zoom="zoom">
+        <marker coords="coords"></marker>
+        <div class="map-loading osb silver">Loading map...</div>
+    </div>-->
+<!--
+        latitude="position.coords.lat"
+        longitude="position.coords.lng" -->
+<!-- google-map -->
+    <div class="google-map" style="display:block"
+        center="position.coords"
+        zoom="zoomProperty"
+        markers="markersProperty"
+        latitude="clickedLatitudeProperty"
+        longitude="clickedLongitudeProperty"
+        mark-click="true"
+        draggable="true"
+        fit="false"
+        events="eventsProperty"
+		style="height: 1000px; width: 100%">
+	</div>
+
+    <div ng-show="needsGPS" class="waiting-overlay osr">
+        <div class="message"> <img src="images/location-icon-clear.png"/>GETTING LOCATION INFO...</div>
+    </div>
+
+    <div ng-show="resumingOverlay" class="waiting-overlay osr">
+        <div class="message">LOADING...</div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="left">
+        <a href="" ng-click="goBack()">
+            <div class="back-icon"></div>
+            <div class="back-text silver osr">BACK</div>
+        </a>
+    </div>
+    <div class="right">
+        <div ng-click="goForward()">
+            <div class="forward-icon"></div>
+            <div class="forward-text silver osr">FORWARD</div>
+        </div>
+    </div>
+</div>
+
+

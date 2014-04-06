@@ -1,0 +1,8 @@
+<div class="expandable description section osr" ng-class="{ 'collapsed': !expanded }">
+    <h3 class="bg-turq" ng-click="expanded=!expanded">{{ title }}</h3>
+
+    <div class="section-content" ng-transclude></div>
+    <div class="more" ng-click="expanded=!expanded">
+        <span ng-show="!expanded">more</span><span ng-show="expanded">less</span>&hellip;
+    </div>
+</div>

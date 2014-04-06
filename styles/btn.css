@@ -1,0 +1,67 @@
+.btn {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  line-height: 30px;
+
+  padding: 0 10px;
+  margin: 0 6px;
+
+  border: none;
+  border-radius: 2px;
+  border-bottom: 2px solid gray;
+
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+
+  color: white;
+  font-size: 20px;
+  font-family: Trade-Gothic-LT;
+}
+.btn.green {
+  background-color: #97ce68;
+  border-bottom-color: #6ea93c;
+}
+.btn.red {
+  background-color: #df504f;
+  border-bottom-color: #b63e3d;
+}
+.btn.grey {
+  background-color: #727272;
+  border-bottom-color: #525252;
+}
+.btn.orange {
+  background-color: rgb(233, 153, 51);
+}
+.btn.small {
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+.btn.large {
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.btn.yes,
+.btn.no,
+.btn.phone {
+  padding-right: 1.5em;
+
+  background-size: 0.8em;
+  background-position: 90% center;
+  background-repeat: no-repeat;
+}
+
+.btn.yes {
+  background-image: url("../images/yes.png");
+}
+.btn.no {
+  background-image: url("../images/no.png");
+}
+
+.btn.phone {
+  background-size: 1.2em;
+  background-image: url("../images/phone.png");
+}
+
+

@@ -1,0 +1,165 @@
+.usrn-item-header {
+    padding: 0.4em;
+}
+
+.usrn-item {
+    border-style: solid;
+    border-color: #d6d6d6;
+}
+
+.usrn-item:not(:first-child) {
+    border-width: 1px 0 0 0;
+}
+
+.usrn-item:last-child {
+    border-width: 1px 0 1px 0;
+}
+
+.usrn-job-icon {
+    background-image: url("../images/usrn.png");
+    background-size: 45px 45px;
+    width: 45px;
+    height: 45px;
+}
+
+.usrn-usrn {
+    line-height: 22px;
+}
+
+.usrn-street-address {
+    line-height: 18px;
+}
+
+.usrn-item-right {
+    margin-top: 8px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.usrn-item-action-container {
+    text-align: right;
+    padding: 0 4px;
+}
+
+.usrn-item-action {
+    display: inline-block;
+    background-size: 71px 71px;
+    width: 71px;
+    height: 71px;
+    margin: 4px;
+}
+
+.icon-complete {
+    background-image: url("../images/complete.png");
+}
+
+.icon-postpone {
+    background-image: url("../images/postpone_button.png");
+}
+
+.icon-summary {
+    background-image: url("../images/summary_button.png");
+}
+
+.icon-summary-disabled {
+    background-image: url("../images/summary_button_disabled.png");
+}
+
+.icon-no-defect {
+    background-image: url("../images/noDefect.png");
+}
+
+.icon-defect {
+    background-image: url("../images/defect.png");
+}
+
+.icon-abort {
+    background-image: url("../images/abort.png");
+}
+
+.usrn-switch-row {
+    padding: 3px 4px;
+    display: -webkit-box;
+    display: flex;
+}
+
+.usrn-switch-label {
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    margin-right: 4px;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.usrn-switch {
+    background-size: 85px 30px;
+    width: 85px;
+    height: 30px;
+}
+
+.usrn-switch-maximo {
+    background-image: url("../images/maxSwitch.png");
+}
+
+.usrn-switch-alpha {
+    background-image: url("../images/alphaSwitch.png");
+}
+
+.button-abort {
+    background-image: url("../images/abort-button.png");
+    background-size: 94px 37px;
+    width: 94px;
+    height: 37px;
+}
+.button-postpone {
+    background-image: url("../images/postpone-button.png");
+    background-size: 94px 37px;
+    width: 94px;
+    height: 37px;
+}
+.button-complete {
+    background-image: url("../images/complete-button.png");
+    background-size: 94px 37px;
+    width: 94px;
+    height: 37px;
+}
+
+.usrn-priority {
+    margin-top: 3px;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.usrn-priority-2 {
+    background-image: url("../images/usrn-priority-2.png");
+}
+
+.usrn-priority-2-c {
+    background-image: url("../images/usrn-priority-2-c.png");
+}
+
+.usrn-priority-2-plus {
+    background-image: url("../images/usrn-priority-2-plus.png");
+}
+
+.usrn-priority-3 {
+    background-image: url("../images/usrn-priority-3.png");
+}
+
+.usrn-priority-4 {
+    background-image: url("../images/usrn-priority-4.png");
+}
+
+.usrn-summary {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 8px 8px 0 8px;
+}
+
+.usrn-summary-column {
+    margin: 0 8px;
+}

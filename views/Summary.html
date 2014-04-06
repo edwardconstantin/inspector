@@ -1,0 +1,33 @@
+<mgheader title="WORK ORDER SUMMARY"></mgheader>
+
+<div class="content grey-background">
+
+    <div class="card flex">
+        <div class="card-header bg-turq white">
+            <div class="card-header-title osb">
+                {{ workOrder.data.streetAddress }} - W/O {{ workOrder.data.wonum }}
+            </div>
+        </div>
+
+        <mgscroll>
+            <summary ng-repeat="usrn in workOrder.data.usrns | orderBy:'USRN'" data="usrn"></summary>
+        </mgscroll>
+    </div>
+    <div class="button-group">
+        <div class="button-group-item btn-act-abort button-abort" ng-click="onAbort()"></div>
+        <div class="button-group-item btn-act-postpone button-postpone" ng-click="onPostpone()"></div>
+        <div class="button-group-item btn-act-complete button-complete" ng-click="onComplete()"></div>
+    </div>
+</div>
+
+<div class="footer">
+
+  <div class="left">
+    <!-- TODO: UPDATE HREF -->
+    <div ng-click="backOnSummary()">
+      <div class="back-icon"></div>
+      <div class="back-text white osr">BACK</div>
+    </div>
+</div>
+
+</div>

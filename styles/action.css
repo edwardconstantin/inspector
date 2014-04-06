@@ -1,0 +1,41 @@
+.action {
+  position: absolute;
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+
+  text-align: center;
+}
+.action .top {
+  padding-top: 1em;
+}
+.action .top img {
+  height: 3em;
+}
+.action .top .message {
+  margin: 0.6em 1.2em 0 1.2em;
+  font-size: 2em;
+}
+.action .top .divider {
+  height: 15px;
+
+  margin-top: 1em;
+
+  background-image: url("../images/triangle.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.action .bottom {
+  margin-top: 1em;
+  padding-top: 0.8em;
+  padding-bottom: 1em;
+}
+.action .bottom .message {
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+}
+.action .bottom .buttons {
+}

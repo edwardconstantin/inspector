@@ -1,0 +1,11 @@
+.expandable .more {
+    display: block;
+    padding: 0.3em 0.6em;
+    margin: 0.2em auto;
+    text-align: center;
+    border-radius: 2px;
+    color: white;
+    background-color: #aeaeae;
+    position: relative;
+    width: 5em;
+}

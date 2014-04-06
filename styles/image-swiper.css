@@ -1,0 +1,39 @@
+.image-swiper {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
+
+.image-swipe-inner {
+    white-space: nowrap;
+}
+
+.image-container {
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+    width: 100px;
+}
+
+/*
+
+.image-container:first-child {
+    padding-left: 16px;
+}
+
+.image-container:last-child {
+    padding-right: 16px;
+}
+
+*/
+
+.photo-thumb {
+
+    width: 100px;
+    height: 100px;
+    border: 6px solid white;
+}
+
+.photo-label {
+    margin: 4px 0;
+    font-size: 15px;
+}

@@ -1,0 +1,285 @@
+.buttonbar {
+    width: 100%;
+    height: 88px;
+}
+.defects-content {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 88px;
+    bottom: 56px;
+}
+
+
+.defect-icon {
+    position: absolute;
+    width: 99%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-family: OpenSans-Regular;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.defect-icon > p {
+    top: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.selected-defect {
+    font-size: 0.70em;
+    width: 39%;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    height: 14px;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+}
+
+.photo-btn {
+    background-image: url("../images/addPhoto.png");
+    background-position: 66% -3px;
+    background-size: 68%;
+}
+
+.location-btn {
+    background-image: url("../images/locationMap.png");
+    background-position: 49% 4px;
+    background-size: 67%;
+}
+
+.defect-details-btn {
+    background-image: url("../images/hazzard.png");
+    background-position: 50% 9px;
+    background-size: 61%;
+}
+
+.defect-type-btn {
+    background-image: url("../images/defectType.png");
+    background-position: 50% -3px;
+    background-size: 80%;
+}
+
+.defect-complete {
+    width: 101%;
+    background-image: url("../images/tick.png");
+    background-position: 50% 16px;
+    background-size: 46%;
+}
+
+p.btn-text {
+    position: relative;
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+    text-align: center;
+}
+
+.defects {
+    width: 96%;
+    left: 2%;
+    right: 2%;
+    position: relative;
+    height: auto;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.defect-title {
+    background: #c3e7e9;
+    padding: 15px 0 10px 0;
+    text-indent: 20px;
+    border-top: 1px solid #b3b3b3;
+    width: 100%;
+    height: auto;
+    font-size: 1.2em;
+    color: rgb(61, 61, 61);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.defect-title-border-btm {
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.title-arrow {
+     background-image: url("../images/arrow.png");
+     background-size: 30px;
+     background-position: 95% 50%;
+     background-repeat: no-repeat;
+     right: 20px;
+}
+
+.title-arrow-down {
+     background-image: url("../images/arrowDown.png");
+     background-size: 30px;
+     background-position: 95% 50%;
+     background-repeat: no-repeat;
+     right: 20px;
+}
+
+.priority-arrow {
+    float: right;
+    margin-right: 20px;
+    background: url("../images/arrow.png");
+    background-size: 30px;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+.priority-arrow-down {
+     background-image: url("../images/arrowDown.png");
+      background-size: 30px;
+     background-position: 95% 50%;
+     background-repeat: no-repeat;
+     float: right;
+     margin-right: 20px;
+}
+
+.grey-bg-top {
+    background: #dddddd;
+    width: 100%;
+    height: 78px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+.switch {
+    height: 41px;
+}
+
+p.defect-options {
+    background: #ffffff;
+    width: 100%;
+    line-height: 40px;
+    border-bottom: 1px solid #b3b3b3;
+    text-indent: 30px;
+    list-style-type: none;
+    display: block;
+}
+
+p.defect-options-lv2 {
+    background: #efefef;
+    width: 100%;
+    line-height: 40px;
+    border-bottom: 1px solid #b3b3b3;
+    text-indent: 50px;
+    list-style-type: none;
+    display: block;
+    font-size: 0.8em;
+}
+
+.defect-title-txt {
+    text-indent: 25px;
+    font-size: 0.95em; 
+    color: rgb(61, 61, 61);
+}
+
+.defect-title-selected {
+    background: url("../images/arrow.png") #b9cfa5;
+    background-size: 30px;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    right: 20px;
+    padding: 15px 0 10px 0;
+    text-indent: 20px;
+    border-top: 1px solid #b3b3b3;
+    width: 100%;
+    height: auto;
+    font-size: 1.2em;
+    color: rgb(61, 61, 61);
+}
+
+.defect-type-txt {
+    font-size: 0.80em;
+    color: rgb(61, 61, 61);
+    padding: 10px 0;
+}
+
+.radio {
+    text-align: left;
+    background-image: url('../images/radio.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-right: 22px;
+    float: right; 
+}
+
+.radio-selected {
+    text-align: left;
+    background-image: url('../images/radioSelected.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-right: 22px;
+    float: right; 
+}
+
+.radio-lv2 {
+    text-align: left;
+    background-image: url('../images/radio.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-right: 22px;
+    float: right; 
+}
+
+.radio-selected-lv2 {
+    text-align: left;
+    background-image: url('../images/radioSelected.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-right: 22px;
+    float: right; 
+}
+
+.abortBtn {
+     background-image: url('../images/abort-button.png');
+}
+
+.booleanSelect {
+    text-align: left;
+    font-size: 0.8em;
+    padding: 0;
+  
+}
+
+.boolean {
+    display: inline-block;
+    position: relative;
+    bottom: 40px;
+    left: 200px;
+    white-space: nowrap;
+    line-height: 40px;
+    width: 120px;
+}
+
+.priority-bg {
+    background: #efefef;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.clipped-text{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 330px;
+    margin-top:10px;
+}
+

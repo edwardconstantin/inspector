@@ -1,0 +1,7 @@
+<mgheader title="Work Items List"></mgheader>
+
+<div class="content-header-only grey-background">
+  <mgscroll id="wrapper">
+    <workorderlistitem ng-repeat="workOrder in workOrders | orderBy:'targetStartDate'" class="block"></workorderlistitem>
+  </mgscroll>
+</div>

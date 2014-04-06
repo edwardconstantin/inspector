@@ -1,0 +1,129 @@
+    <div class="title-arrow defect-title tg" 
+        ng-click="defectSelection($index)" 
+        ng-class="{'title-arrow-down': isContentVisible, 'title-arrow': !isContentVisible, 
+                    'defect-title-selected' : defectHeader, 'defect-title' : !defectHeader}">
+                    {{ defect.name }}  -    
+        <span class="selected-defect osr">{{ faultData[$index].choice }}</span>
+    </div>
+
+    <div ng-show="isContentVisible" data-ng-repeat="option in defect.options">
+
+            <div ng-switch="option.type">
+
+            <!-- SINGLE SELECTION -->
+                <span ng-switch-when="single">
+
+                    <p class="defect-options"  
+                         ng-click="optionSelection($index, option.title, defect.name)">
+
+                        <label for="{{ option.title }}" 
+                            value="{{ option.title }}" 
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+                        <span ng-class="{ 'radio-selected': faultOption == $index || option.selected, 'radio': faultOption != $index || option.selected }" class="radio">&nbsp;</span> 
+
+                        <span class="clear"></span>
+                    </p>        
+
+                </span>
+            
+
+            <!-- YES / NO -->    
+        <span ng-switch-when="boolean">
+
+                    <p class="defect-options switch">
+
+                        <label for="{{ option.title }}" 
+                            value="{{ option.title }}" 
+                            class="defect-type-txt osr bold"> {{ option.title }} </label>
+   
+                                <span ng-click="optionBoolean($index, option.title)" value="yes" ng-class="{ 'radio-selected': boolOption, 'radio': !boolOption }" class="radio">&nbsp;</span> 
+                    </p>        
+
+                </span> 
+
+                      <!-- YES / NO -->    
+<!--         <span ng-switch-when="boolean">
+
+                    <p class="defect-options switch">
+
+                        <label for="{{ option.title }}" 
+                            value="{{ option.title }}" 
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+   
+                            <div class="boolean">
+                                <span class="left">
+                                <p class="osr booleanSelect left">Yes</p>
+                                <p ng-click="optionBoolean($index, option.title)" value="yes" ng-class="{ 'yesRadioBtnSelected': yesNo, 'yesRadioBtn': !yesNo }"class="yesRadioBtn right">&nbsp;</p>
+                                <p class="clear"></p>
+                                </span>
+                                 
+                            <span class="right"> 
+                                <p class="osr booleanSelect left ">No</p>
+                                <p ng-click="optionBoolean($index, option.title)" value="no" ng-class="{ 'noRadioBtnSelected': !yesNo, 'noRadioBtn': yesNo }"
+                                        class="noRadioBtn right">&nbsp;</p>
+                                </span>
+                               
+                                <p class="clear"></p>
+
+                            </div>
+                
+                          <span class="clear"></span> 
+                    </p>        
+
+                </span>  -->
+
+            <!-- drop down menu -->
+                <span ng-switch-when="dropDown">    
+
+                    <p class="defect-options"  
+                        ng-click="optionDropDown($index, value)">
+
+                        <label for="{{ option.title }}" 
+                            value="{{ option.title }}" 
+                            class="defect-type-txt osr"> {{ option.title }} </label>
+
+                            <span ng-class="{'priority-arrow-down': visible, 'priority-arrow': !visible}" class="priority-arrow">&nbsp;</span> 
+                   
+                    <!-- Priority options level 2-->
+                        <div ng-show="visible" ng-repeat="state in option.states ">
+
+                            <p class="defect-options-lv2 osr"  
+                                 ng-click="prioritySelection($index, value)"> 
+                                   <label   for="{{ state }}" 
+                                            class="defect-options-lv2 osr"
+                                            value="{{ state }}"> {{ state }} </label>
+                               
+
+                       <!--       <span ng-class="{ 'radio-selected-lv2': faultOption == $index, 'radio-lv2': faultOption != $index }" class="radio">&nbsp;</span>   -->
+                                  
+                           <span ng-class="{ 'radio-selected-lv2': priorityOption == $index, 'radio-lv2': priorityOption != $index }" class="radio-lv2">&nbsp;</span>
+                            </p>
+                        </div>
+
+                        <span class="clear"></span>
+                    </p>        
+
+                </span>
+
+            <!-- DEFECTS FILTER TYPE -->
+                <span ng-switch-when="filter">
+                   
+                    <p class="defect-options"  
+                        ng-click="optionSelection($index, item, defect.name)"
+                        ng-repeat="item in myArray"> 
+                        
+                        <label for="{{ item }}" 
+                            value="{{ item }}" 
+                            class="defect-type-txt osr">{{ item }}</label>
+
+                        <span ng-class="{ 'radio-selected': faultOption == $index, 'radio': faultOption != $index }" class="radio">&nbsp;</span> 
+
+                        <span class="clear"></span>
+                    </p>
+                     
+                </span>                
+
+            </div>
+    </div>
+

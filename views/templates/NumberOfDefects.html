@@ -1,0 +1,14 @@
+
+    <!-- SINGLE SELECTION -->
+    <div ng-show="isContentVisible" data-ng-repeat="option in numDefects.options">
+                  <p class="defect-options"
+                        ng-model="defectDetails.numDefects" ng-click="optionSelection($index, option.title, defect.name)" >
+
+                        <label for="{{ option.title }}"
+                            value="{{ option.title }}"
+                            class="defect-type-txt osr"> {{ option.title }}</label>
+                        <span ng-class="{ 'radio-selected': faultOption == $index , 'radio': faultOption != $index || option.selected }" >&nbsp;</span>
+                        <span class="clear"></span>
+                    </p>
+             </div>
+

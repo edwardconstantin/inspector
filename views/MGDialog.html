@@ -1,0 +1,11 @@
+<div class="dialog" ng-show="control.opened">
+  <div class="dialog-container">
+    <div class="dialog-inner">
+        <div class="dialog-fake-corners"></div>
+        <div class="dialog-header {{ headerClass }}">{{ title }}</div>
+        <div class="dialog-content-wrapper">
+            <div class="dialog-content" ng-transclude></div>
+        </div>
+    </div>
+  </div>
+</div>

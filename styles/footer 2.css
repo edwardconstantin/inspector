@@ -1,0 +1,100 @@
+.footer {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgb(61, 61, 61);
+  text-align: center;
+}
+
+.footer .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 54px;
+  height: 45px;
+}
+
+.footer .center {
+  display: inline-block;
+  height: 43px;
+  margin: 8px auto;
+}
+
+.footer .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 4px;
+  width: 56px;
+  height: 45px;
+}
+
+.back-icon {
+  background: url("../images/back-icon.png") no-repeat;
+  background-size: 21px;
+  width: 21px;
+  height: 35px;
+  margin-left: 14px;
+  margin-bottom: 0px;
+}
+
+.back-text {
+  font-size: 63%;
+}
+
+.forward-icon {
+  background: url("../images/forward-icon.png") no-repeat;
+  background-size: 21px;
+  width: 21px;
+  height: 35px;
+  margin-left: 14px;
+  margin-bottom: 0px;
+}
+
+.forward-text {
+  font-size: 63%;
+}
+
+.summary-menu-btn {
+    background-image: url("../images/summary.png");
+    background-repeat: no-repeat;
+    background-size: 47px;
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+}
+
+.defects-back-btn {
+    background-image: url("../images/back.png");
+    background-repeat: no-repeat;
+    background-size: 28px;
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.work-gang-icon {
+  background: url("../images/work-gang-icon.png") no-repeat;
+  background-size: 30px;
+  width: 30px;
+  height: 32px;
+  margin-left: 13px;
+  margin-bottom: 3px;
+}
+
+.work-gang-icon-highlighted {
+  background: url("../images/work-gang-icon-highlighted.png") no-repeat;
+  background-size: 30px;
+  width: 30px;
+  height: 32px;
+  margin-left: 13px;
+  margin-bottom: 3px;
+}
+
+.work-gang-text {
+  font-size: 63%;
+}

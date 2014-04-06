@@ -1,0 +1,117 @@
+<mgheader title="Defect Type"></mgheader>
+
+<div class="content" ng-init="renderHistory()">
+
+    <!-- btn navigation -->
+    <div class="buttonbar grey-bg-top">
+        <div class="button" ng-click="takeAnotherPhoto()">
+            <div class="bg-orange defect-icon photo-btn">
+                <p class-="btn-text">Add Photo</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-green defect-icon location-btn">
+                <p class-="btn-text">Location</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-darkred defect-icon defect-type-btn">
+                <p class-="btn-text">Defect Type</p>
+            </div>
+        </div>
+        <div class="button" ng-click="notComplete()">
+            <div class="bg-lightgrey defect-icon defect-details-btn">
+                <p class-="btn-text">Details</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-lightgrey defect-icon defect-complete">
+                <p class-="btn-text">Complete</p>
+            </div>
+        </div>
+    </div>
+
+    <mgscroll>
+
+        <div class="defects">
+            <defect ng-repeat="defect in defects.faults"></defect>
+        </div>
+
+        <div class="defect-type image-swiper grey-background">
+            <div class="image-swipe-inner">
+                <div class="image-container" ng-repeat="photo in workOrder.photos">
+
+                    <div class="photo-thumb"><!--style="background-image:url('{{photo.url}}')"--></div>
+                    <div class="photo-label ellipsis osr">{{ photo.description }}</div>
+                </div>
+            </div>
+        </div>
+
+    </mgscroll>
+
+</div>
+
+
+<div class="footer">
+    <div class="left"> <!-- TODO: should use a function on the directive and $window.history.back(); -->
+        <a href="" ng-click="goBack()">
+            <div class="back-icon"></div>
+            <div class="back-text silver osr">BACK</div>
+        </a>
+    </div>
+    <div class="button-group">
+        <div class="btn red" ng-click="abort()">ABORT</div>
+    </div>
+    <div ng-hide="showForBtn" class="right">
+        <div ng-click="goForward()">
+            <div class="forward-icon"></div>
+            <div class="forward-text silver osr">FORWARD</div>
+        </div>
+    </div>
+</div>
+ 
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<{ User Alert Dialogs }>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<mgdialog title="Please complete check list" header-class="bg-turq" control="validationDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            <p>Each section must be completed in order.<br/><br/> You cannot reopen completed sections.<br/><br/>To change a selection you must start the checklist again.</p>
+            <div class="button-group">
+                <button class="btn green flex-container" ng-click="validationDialog.close()">OK</button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+
+<mgdialog title="Please complete check list" header-class="bg-turq" control="notCompleteDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            <p>Please complete Defect Type feedback before progressing.</p>
+            <div class="button-group">
+                <button class="btn green flex-container" ng-click="notCompleteDialog.close()">OK</button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+
+<mgdialog title="Error!!" header-class="bg-turq" control="noDataDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            <p>Cannot retrieve previous selected data..</p>
+            <div class="button-group">
+                <button class="btn green flex-container" ng-click="noDataDialog.close()">OK</button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+
+<mgdialog title="Are you sure?" header-class="bg-turq" control="abortDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            <p>You are about to abort the current Defect. Are you sure?</p>
+            <div class="button-group">
+                <button value="ok" class="btn green flex-container" ng-click="abortDialog.closeOk()">OK</button>
+                <button value="cancel" class="btn green flex-container" ng-click="abortDialog.closeCancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</mgdialog>

@@ -1,0 +1,203 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>May Gurney</title>
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/bootstrap.custom.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link rel="stylesheet" href="styles/google-map.css">
+    <link rel="stylesheet" href="styles/dialog.css">
+    <link rel="stylesheet" href="styles/btn.css">
+    <link rel="stylesheet" href="styles/tabs.css">
+    <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/action.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/usrn.css">
+    <link rel="stylesheet" href="styles/expandable.css">
+    <link rel="stylesheet" href="styles/defects.css">
+    <link rel="stylesheet" href="styles/details.css">
+    <link rel="stylesheet" href="styles/location.css">
+    <link rel="stylesheet" href="styles/image-swiper.css">
+
+    <!-- For use in the browser to show the camera feed -->
+    <link rel="stylesheet" href="styles/camera.css">
+    <!-- endbuild -->
+
+    <!-- GOOGLE MAPS API WITH ACCOUNT KEY -->
+    <!-- TODO: CHANGE API KEY! TODO: DO WE NEED SENSOR? -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFZH7NJ4vgn6VIUeEzK8tIABXvaDKRDGs&sensor=true"></script>
+
+
+    <!-- // <script src="http://192.168.46.55:8080/target/target-script-min.js#anonymous"></script> -->
+
+
+  </head>
+
+  <body ng-controller="Login">
+
+    <div class="container" ng-cloak ng-view></div>
+
+    <!-- libs -->
+
+    <!-- nodejs url/path lib and deps -->
+    <script src="components/querystring.js"></script>
+    <script src="components/punycode.js"></script>
+    <script src="components/url.js"></script>
+    <script src="components/path.js"></script>
+    <!-- end: node js url/path lib and deps -->
+
+    <!-- <script src="components/hammer.js"></script> -->
+    <script src="components/sha1.js"></script>
+    <script src="components/moment.min.js"></script>
+    <script src="components/spark-md5.js"></script>
+    <script src="components/Lawnchair.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <!-- <script src="components/fastclick.js"></script> -->
+    <!-- end: libs -->
+
+    <script>
+        (function() {
+            var script = document.createElement("script");
+            if(navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+                script.src = "components/cordova/cordova.js";
+                document.body.appendChild(script);
+            }
+            else {
+                var cameraScript = document.createElement("script");
+                script.src = "components/phonegap-desktop/phonegap-desktop.js";
+                cameraScript.src = "js/Camera.js";
+                document.body.appendChild(script);
+                document.body.appendChild(cameraScript);
+            }
+        })();
+    </script>
+
+    <!-- plugin script files -->
+    <script src="plugins/filehasher.js"></script>
+    <script src="plugins/fileopener.js"></script>
+    <script src="plugins/version.js"></script>
+    <script src="plugins/screencapture.js"></script>
+    <!-- end: plugin script files -->
+
+    <script src="components/ui-bootstrap.js"></script>
+    <script src="components/iscroll/iscroll-lite.js"></script>
+    <script src="components/feedhenry/feedhenry.js"></script>
+    <script src="components/feedhenry/sync-cli.js"></script>
+
+    <!-- build:js scripts/scripts.js -->
+
+    <script src="App.js"></script>
+
+    <!-- Services -->
+    <script src="mg_services/SyncManager.js"></script>
+    <script src="mg_services/WorkOrderManager.js"></script>
+    <script src="mg_services/DefectManager.js"></script>
+    <script src="mg_services/Logger.js"></script>
+    <script src="mg_services/GPSService.js"></script>
+    <script src="mg_services/Attachments.js"></script>
+    <script src="mg_services/Network.js"></script>
+    <script src="mg_services/Navigation.js"></script>
+    <script src="mg_services/Auth.js"></script>
+
+    <!-- Controllers -->
+    <script src="controllers/Login.js"></script>
+    <script src="controllers/WorkOrderList.js"></script>
+    <script src="controllers/USRN.js"></script>
+    <script src="controllers/Location.js"></script>
+    <script src="controllers/DefectType.js"></script>
+    <script src="controllers/DefectDetails.js"></script>
+    <script src="controllers/RaiseDefect.js"></script>
+    <script src="controllers/USRNSummary.js"></script>
+    <script src="controllers/Location.js"></script>
+    <script src="controllers/LocationMap.js"></script>
+    <script src="controllers/Photo.js"></script>
+
+    <!-- Directives -->
+    <script src="directives/WorkOrderListItem.js"></script>
+    <script src="directives/MGHeader.js"></script>
+    <script src="directives/MGScroll.js"></script>
+    <script src="directives/DefectList.js"></script>
+    <script src="directives/RiskAssessment.js"></script>
+    <script src="directives/MGDialog.js"></script>
+    <script src="directives/MGAction.js"></script>
+    <script src="directives/Expandable.js"></script>
+    <script src="directives/Swipeable.js"></script>
+    <script src="directives/Attachment.js"></script>
+    <script src="directives/USRN.js"></script>
+    <script src="directives/Defect.js"></script>
+    <script src="directives/Details.js"></script>
+    <script src="directives/USRNSummary.js"></script>
+    <script src="directives/Textarea.js"></script>
+    <script src="directives/GoogleMap.js"></script>
+    <script src="directives/Focus.js"></script>
+    <script src="directives/Blur.js"></script>
+    <script src="js/FileTransfer.js"></script>
+
+    <script>
+
+        document.addEventListener("deviceready", function() {
+            function bootstrap() {
+                angular.bootstrap(document.body, ['mgApp']);
+            }
+
+            bootstrap();
+
+            // "host": "http://127.0.0.1:8000",
+            // "appid": "PWmwi2CpYGevbZsZyat2FW5o",
+            // "appkey": "db32cc1261fa12e29ade54acab99504b014529c9"
+
+            // var fh_config = {"appid":"_V58x1l9xm1iRTvd5b_MDCa6","appkey":"3c8cdfda6a9db304232f6379e94ec0b25f4d3a10","host":"https://ucb.appsdeveloper.o2.co.uk","mode":"dev"};
+
+            // $fh.init(fh_config, function(){
+            //     console.log( ' success init ' );
+            //     UCB.loadingScreen.hide(null, 3000);
+            // }, function(){
+
+
+            // $fh.init({
+            //     "host": "https://maygurney.feedhenry.com",
+            //     "appid": "o4qh_Yb1bzlyARIBVQG4Juee",
+            //     "appkey": "bcc60fe2bd7cabab346de8974c58a540d847fdba",
+            //     "mode": "dev"
+            // }, function(res) {
+            //     bootstrap();
+            //     console.log("$fh initialised");
+            // }, function(msg, err) {
+            //     bootstrap();
+            //     console.log("$fh failed to initialise");
+            // });
+
+        }, false);
+
+        Array.prototype.remove = function() {
+            var what, a = arguments, L = a.length, ax;
+            while (L && this.length) {
+                what = a[--L];
+                while ((ax = this.indexOf(what)) !== -1) {
+                    this.splice(ax, 1);
+                }
+            }
+            return this;
+        };
+
+        // FastClick.attach(document.body);
+
+
+
+    </script>
+    <!-- endbuild -->
+
+  </body>
+
+</html>

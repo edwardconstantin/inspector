@@ -1,0 +1,128 @@
+<mgheader title="Defect Details"></mgheader>
+
+<div class="content">
+
+    <!-- btn navigation -->
+    <div class="buttonbar grey-bg-top">
+        <div class="button" ng-click="takeAnotherPhoto()">
+            <div class="bg-orange defect-icon photo-btn">
+                <p class-="btn-text">Add Photo</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-green defect-icon location-btn">
+                <p class-="btn-text">Location</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-green defect-icon defect-type-btn">
+                <p class-="btn-text">Defect Type</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-darkred defect-icon defect-details-btn">
+                <p class-="btn-text">Details</p>
+            </div>
+        </div>
+        <div class="button" ng-click="updateStatus()">
+            <div ng-class="{'bg-orange defect-icon defect-complete': required, 'bg-darkred defect-icon defect-complete': !required}">
+                <p class-="btn-text">Complete</p>
+            </div>
+        </div>
+    </div>
+
+    <mgscroll>
+        <div class="card flex">
+
+            <div class="card-header bg-turq white">
+                <div class="card-header-title osr">
+                    {{faultData[0].choice}}
+                </div>
+            </div>
+
+            <form ng-click="removePlaceHolder()">
+                <div class="card-input-row osr grey flex-container flex-contain-center">
+                    <div class="card-input-label flex tg">Depth (mm)</div>
+                    <div class="flex"><input ng-click="removePlaceHolder()" ng-model="defectDetails.depth" placeholder="0" type="tel" class="input grey" tabindex="1" ></input></div>
+                </div>
+                <div class="card-input-row osr grey flex-container flex-contain-center">
+                    <div class="card-input-label flex tg">Width (mm)</div>
+                    <div class="flex"><input ng-click="removePlaceHolder()" ng-model="defectDetails.width" type="tel" placeholder="0" class="input grey" tabindex="2" ></input></div>
+                </div>
+                <div class="card-input-row osr grey flex-container flex-contain-center">
+                    <div class="card-input-label flex tg">Length (mm)</div>
+                    <div class="flex"><input ng-click="removePlaceHolder()" ng-model="defectDetails.len" type="tel" placeholder="0" class="input grey" tabindex="3" ></input></div>
+                </div>
+            </form>
+
+            <div ng-click="test()" class="card-text-row osr grey">
+                Measurement of largest defect
+            </div>
+
+                 <!-- number of defects dropdown -->
+            <div class="details">
+                 <p class="title-arrow details-title tg"
+                    ng-click="defectSelection($index)"
+                    ng-class="{'title-arrow-down': isContentVisible, 'title-arrow': !isContentVisible,
+                        'details-title-selected' : selectDefect, 'details-title' : !selectDefect}">
+                        {{ numDefects.name }} <span class="selected-defect osr">{{ defectDetails.numDefects }}</span>
+                </p>
+
+                <p details></p>
+            </div>
+
+            <div class="flex">
+                <div class="textarea-header tg bg-blue osr additional-details">
+                    Details:
+                </div>
+                <div class="positioned">
+                    <div class="dummy-comments osb silver" ng-show="!defectObj.data.additionalDetails && !isCommentsFocused">Please enter additional details here.</div>
+                    <textarea class="osr" ng-model="defectObj.data.additionalDetails" ng-focus="isCommentsFocused=true" ng-blur="isCommentsFocused=false" cols="20" rows="10" wrap="soft"></textarea>
+                </div>
+            </div>
+        </div>
+    </mgscroll>
+
+</div>
+
+<div class="footer">
+    <div class="left">
+        <a href="" ng-click="goBack(goBackFlag)">
+            <div class="back-icon"></div>
+            <div class="back-text silver osr">BACK</div>
+        </a>
+    </div>
+    <div class="button-group">
+        <div class="btn red" ng-click="abort()">ABORT</div>
+    </div>
+     <div class="right">
+        <div ng-click="updateStatus()">
+            <div class="forward-icon"></div>
+            <div class="forward-text silver osr">FORWARD</div>
+        </div>
+    </div>
+</div>
+
+<mgdialog title="Please add Defect demensions." header-class="bg-turq" control="validationDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            <p>Each section must be given a value in (mm).</p>
+            <div class="button-group">
+                <button class="btn green flex-container" ng-click="validationDialog.close()">OK</button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+
+<mgdialog title="Are you sure?" header-class="bg-turq" control="abortDialog">
+    <div class="query-dialog">
+        <div class="text osr">
+            <p>You are about to abort the current Defect. Are you sure?</p>
+            <div class="button-group">
+                <button value="ok" class="btn green flex-container" ng-click="abortDialog.closeOk()">OK</button>
+                <button value="cancel" class="btn green flex-container" ng-click="abortDialog.closeCancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</mgdialog>
+

@@ -1,0 +1,30 @@
+<div class="dialog">
+  <div class="dialog-container">
+    <div class="dialog-header bg-green">
+      WORK ITEM <span class="darkgreen">COMPLETE</span>
+    </div>
+    <form class="dialog-content">
+
+      <div ng-repeat="item in main" class="row darkgrey">
+        <label>
+          <div class="item-wrapper">
+            <input name="result" ng-change="things()" ng-model="result.value" value="{{ item.val }}" type="radio" />
+          </div>
+          {{ item.text }}
+        </label>
+      </div>
+
+      <div class="divider bg-darkgrey white">MADE SAFE (Select Reason)</div>
+
+      <div ng-repeat="item in sub" class="row darkgrey">
+        <label>
+          <div class="item-wrapper">
+            <input name="result" ng-change="things()" ng-model="result.value" value="{{ item.val }}" type="radio" />
+          </div>
+          {{ item.text }}
+        </label>
+      </div>
+
+    </form>
+  </div>
+</div>

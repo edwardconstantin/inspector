@@ -1,0 +1,24 @@
+<div class="action bg-darkred">
+
+  <div class="top grey-background">
+    <img ng-src="{{ icon }}"/>
+
+    <div class="message darkgrey tg" ng-transclude></div>
+
+    <div class="divider bg-darkred"></div>
+  </div>
+
+  <div class="bottom">
+
+    <div class="message bg-darkred white tg">{{ message }}</div>
+
+    <div class="buttons">
+
+      <button ng-show="func" class="btn green yes" ng-click="ok()">{{ btnText || "OK" }}</button>
+      <a ng-show="dest" class="btn green yes" href="{{ dest }}">{{ btnText || "OK" }}</a>
+      <a ng-show="tel" class="btn green phone" href="tel:{{ tel }}">Phone</a>
+
+    </div>
+
+  </div>
+</div>

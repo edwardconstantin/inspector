@@ -1,0 +1,39 @@
+<div class="usrn-item" ng-switch on="usrn.status">
+    <div class="usrn-item-header flex-container" ng-class="{ 'bg-lightorange': usrn.status == 'POSTPONE', 'bg-lightgreen': usrn.status == 'COMPLETE' }" ng-switch on="usrn.status" ng-click="toggleCollapse()">
+        <div class="usrn-job-icon"></div>
+        <div class="flex pad-h-small osr">
+            <div class="usrn-usrn">USRN: {{ usrn.usrn }}</div>
+            <div class="usrn-street-address">{{ usrn.usrnLocation }}</div>
+        </div>
+        <div class="usrn-item-right" ng-switch-when="COMPLETE">
+            <div class="card-header-right osr white">
+                <div class="work-order-list-workpack">Completed</div>
+                <div class="yes-icon"></div>
+            </div>
+        </div>
+        <div class="usrn-item-right" ng-switch-when="POSTPONE">
+            <div class="card-header-right osr white">
+                <div class="work-order-list-workpack">Postponed</div>
+                <div class="postponed-icon"></div>
+            </div>
+        </div>
+        <div class="usrn-item-right expand-control" ng-switch-default>
+            <div class="card-header-right osr">
+                <div class="usrn-priority" ng-if="usrn.priority" ng-class="{ 'usrn-priority-2': usrn.priority == '2', 'usrn-priority-2-plus': usrn.priority == '2+', 'usrn-priority-2-c': usrn.priority == '2c', 'usrn-priority-3': usrn.priority == '3', 'usrn-priority-4': usrn.priority == '4' }"></div>
+                <div class="chevron chevron-grey"></div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-switch-when="5"></div>
+
+    <div ng-switch-when="-1"></div>
+
+    <div ng-switch-default collapse="isCollapsed" class="usrn-item-action-container">
+        <div class="usrn-item-action btn-act-complete icon-complete" ng-show="defectExists" ng-click="onComplete()"></div>
+        <div class="usrn-item-action btn-act-no-defect icon-no-defect" ng-show="!defectExists" ng-click="onNoDefect()"></div>
+        <div class="usrn-item-action btn-act-no-defect icon-defect" ng-click="onDefect()"></div>
+        <div class="usrn-item-action btn-act-no-postpone icon-postpone" ng-click="onPostpone()"></div>
+        <div class="usrn-item-action btn-act-no-postpone" ng-class="{'icon-summary': defectExists, 'icon-summary-disabled': !defectExists}" ng-click="onSummary()"></div>
+    </div>
+</div>

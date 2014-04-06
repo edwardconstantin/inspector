@@ -1,0 +1,13 @@
+<div class="attachment" ng-click="attachment.ref.open()">
+    <div class="wrapper">
+
+        <div class="attachment-icon osr {{ attachment.ref.extension }}">
+            <div ng-show="attachment.ref.remoteStatus == attachment.ref.INPROGRESS">{{ attachment.ref.progress | number:2 }}%</div>
+        </div>
+
+        <div class="name">{{ attachment.description }}</div>
+
+        <div class="arrow"></div>
+
+    </div>
+</div>

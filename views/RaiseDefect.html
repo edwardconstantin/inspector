@@ -1,0 +1,51 @@
+<mgheader title="DEFECT SUMMARY"></mgheader>
+
+<div class="content defects-view">
+
+    <!-- btn navigation -->
+    <div class="buttonbar grey-bg-top">
+        <div class="button" ng-click="takeAnotherPhoto()">
+            <div class="bg-orange defect-icon photo-btn">
+                <p class-="btn-text">Add Photo</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-green defect-icon location-btn">
+                <p class-="btn-text">Location</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-green defect-icon defect-type-btn">
+                <p class-="btn-text">Defect Type</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-green defect-icon defect-details-btn">
+                <p class-="btn-text">Details</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bg-darkred defect-icon defect-complete">
+                <p class-="btn-text">Complete</p>
+            </div>
+        </div>
+    </div>
+
+    <mgscroll>
+        <defectlist></defectlist>
+    </mgscroll>
+
+</div>
+
+<div class="footer">
+    <div class="left">
+        <div ng-click="backOnRaise()">
+            <div class="back-icon"></div>
+            <div class="back-text silver osr">BACK</div>
+        </div>
+    </div>
+    <div class="button-group">
+        <div class="btn green" ng-click="sendDefect()">SEND DEFECT</div>
+    </div>
+</div>
+

@@ -1,0 +1,153 @@
+.dialog {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  font-family: Trade-Gothic-LT;
+}
+
+.dialog-container {
+  position: absolute;
+  width: 90%;
+  height: 95%;
+  top: 2.5%;
+  left: 5%;
+
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dialog-inner {
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.dialog-content-wrapper {
+  position: absolute;
+  width: 100%;
+  max-height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* correct for the dialog header; see below for header height */
+  /* subtract one pixel for android overflow rendering bug */
+  padding-top: 63px;
+  /* add 1px top margin for android overflow rendering bug */
+  margin-top: 1px;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.dialog-content {
+  max-height: 100%;
+  position: relative;
+  border-radius: 5px;
+}
+
+.dialog-content-inner {
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+}
+
+.dialog .dialog-content {
+  min-height: 5em;
+}
+
+.dialog .dialog-header {
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 1.6em;
+  font-family: Trade-Gothic-LT;
+  color: white;
+}
+
+.dialog-header {
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  z-index: 1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.dialog-fake-corners {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: #333;
+  top: 0;
+  z-index: 1;
+}
+
+.dialog .row {
+  position: relative;
+
+  line-height: 2em;
+  border-bottom: 1px solid #ddd;
+  font-size: 01em;
+  font-family: Trade-Gothic-LT;
+}
+
+.dialog label {
+  display: inline-block;
+  width: 100%;
+}
+
+.dialog input[type="radio"],
+.dialog input[type="checkbox"] {
+ -webkit-appearance: none;
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 100%;
+  border: 0.2em solid #666;
+  vertical-align: middle;
+}
+.dialog input[type="radio"]:checked,
+.dialog input[type="checkbox"]:checked {
+  border-color: rgb(151, 206, 104);
+}
+.dialog input[type="radio"]:checked:after,
+.dialog input[type="checkbox"]:checked:after {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+
+  margin-top: -3px;
+  margin-left: -3px;
+
+  background-color: rgb(151, 206, 104);
+  border-radius: 100%;
+
+  z-index: 1000;
+}
+.dialog .divider {
+  margin: 0;
+  border: none;
+  line-height: 2em;
+
+  padding: 0 1em;
+}
+.dialog .item-wrapper {
+  display: inline-block;
+
+  width: 3em;
+
+  margin-right: 0.5em;
+
+  text-align: center;
+}

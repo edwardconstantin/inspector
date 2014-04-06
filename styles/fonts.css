@@ -1,0 +1,27 @@
+@font-face {
+ font-family: OpenSans-Regular;
+ src: url("fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+ font-family: OpenSans-Bold;
+ src: url("fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+ font-family: Trade-Gothic-LT;
+ src: url("fonts/Trade-Gothic-LT-Bold-Condensed-No.-20.ttf");
+}
+
+
+.osr {
+  font-family: OpenSans-Regular;
+}
+
+.osb {
+  font-family: OpenSans-Bold;
+}
+
+.tg {
+  font-family: Trade-Gothic-LT;
+}

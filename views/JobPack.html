@@ -1,0 +1,48 @@
+<mgheader title="Job Pack: {{ workOrder.data.wonum }}"></mgheader>
+
+<div class="content grey-background">
+
+  <div class="tabs">
+    <div class="tab selected">TAB 1</div>
+    <div class="tab">TAB 2</div>
+    <div class="tab">TAB 3</div>
+  </div>
+
+
+  <div class="job-pack-content sub-content" swipeable swipe-right="#/WorkOrder/{{ workOrder.id }}">
+
+    <mgscroll>
+
+      <expandable title="{{ workOrder.data.description }}">
+        <pre>{{ workOrder.data.summary }}</pre>
+      </expandable>
+
+      <div class="job-pack-attachments">
+        <attachment ng-repeat="attachment in workOrder.attachments" data="attachment"></attachment>
+      </div>
+
+    </mgscroll>
+
+  </div>
+
+</div>
+
+
+
+<div class="footer">
+
+  <div class="left">
+    <a href="#/WorkOrder/{{ workOrder.id }}">
+      <div class="back-icon"></div>
+      <div class="back-text white osr">BACK</div>
+    </a>
+  </div>
+
+  <div class="center">
+    <a href="#/WorkGang">
+        <div class="work-gang-icon"></div>
+        <div class="work-gang-text silver osr">Work Gang</div>
+    </a>
+  </div>
+
+</div>

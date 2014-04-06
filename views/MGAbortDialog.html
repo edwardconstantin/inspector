@@ -1,0 +1,37 @@
+<div class="dialog">
+  <div class="dialog-container">
+    <div class="bg-darkred dialog-header">
+      SELECT ABORT REASON
+    </div>
+    <div class="dialog-content">
+      <form>
+        <div>
+          <div class="divider bg-blue grey" ng-click="showTms=!showTms">
+            <span>Select TM Required</span>
+            <img class="dropdown-arrow" ng-class="{ 'rotate': showTms }" src="images/arrow-icon-grey.png">
+          </div>
+          <div ng-show="showTms">
+            <div ng-repeat="tm in tms" class="row darkgrey">
+              <label>
+                <div class="item-wrapper bg-blue">
+                  <input name="result" ng-change="things()" ng-model="result.value" value="{{ tm.val }}" type="radio" />
+                </div>{{ tm.text }}
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div ng-show="!showTms">
+          <div ng-repeat="reason in abortReasons" class="row darkgrey">
+            <label>
+              <div class="item-wrapper">
+                <input name="result" ng-change="things()" ng-model="result.value" value="{{ reason.val }}" type="radio" />
+              </div>{{ reason.text }}
+            </label>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

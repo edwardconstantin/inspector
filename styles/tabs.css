@@ -1,0 +1,23 @@
+.tabs {
+  margin: 0.2em;
+
+  font-family: OpenSans-Bold;
+}
+.tabs .tab {
+  float: left;
+
+  line-height: 3em;
+  width: 33.3%;
+
+  background-image: -webkit-linear-gradient(#2F99A8 50%, #298C9A 50%, #298C9A 100%);
+  box-shadow: 0 0.1em 0 #9b6f3b;
+
+  text-align: center;
+  color: white;
+}
+.tabs .tab.selected {
+    background-image: none;
+    background-color: #2F99A8;
+    box-shadow: inset 0 0 0.6em 0.3em rgba(0, 0, 0, 0.2),
+                0 0.1em 0 #298C9A;
+}

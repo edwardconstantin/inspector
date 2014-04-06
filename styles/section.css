@@ -1,0 +1,41 @@
+.section {
+  position: relative;
+  overflow: hidden;
+
+  margin: 0.2em;
+  margin-top: 0.3em;
+  padding: 0.2em 0.2em 0 0.2em;
+  border-radius: 0.3em 0.3em 0 0;
+
+  background-color: white;
+}
+.section h3 {
+  position: relative;
+  line-height: 2.5em;
+
+  border-radius: 0.2em 0.2em 0 0;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: OpenSans-Regular;
+  font-size: 0.9em;
+  padding: 0 1.5em 0 1em;
+  color: white;
+}
+.section .section-content {
+  margin: 10px 14px 12px 10px;
+  overflow: hidden;
+}
+.section.collapsed .section-content {
+  max-height: 160px;
+}
+.section h3 .dropdown-arrow {
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+  margin-top: -0.7em;
+  width: 1em;
+  height: 1.4em;
+}

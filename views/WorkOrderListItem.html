@@ -1,0 +1,38 @@
+<div ng-click="selectWorkOrder(workOrder)" class="block">
+  <div class="work-order-list-wrapper" ng-class="{ 'collapsed': (workOrder.statusValue() == workOrder.ABORT || workOrder.statusValue() == workOrder.POSTPONE || workOrder.statusValue() == workOrder.COMPLETE) }">
+    <div class="card-header bg-turq white" ng-class="{ 'bg-darkred': workOrder.statusValue() == workOrder.ABORT, 'bg-orange': workOrder.statusValue() == workOrder.POSTPONE, 'bg-green': workOrder.statusValue() == workOrder.COMPLETE }" ng-switch on="workOrder.statusValue()">
+      <div class="card-header-title osb">
+        Work Order No:
+        <span class="osr">{{ workOrder.data.wonum }}</span>
+      </div>
+
+      <div ng-switch-when="-1" class="card-header-right osr">ABORTED</div>
+      <div ng-switch-when="4" class="card-header-right osr">POSTPONED</div>
+      <div ng-switch-when="5" class="card-header-right osr">COMPLETED</div>
+
+      <div ng-switch-default class="card-header-right osr">
+        <div class="work-order-list-workpack">USRN</div>
+        <div class="chevron chevron-white"></div>
+      </div>
+    </div>
+
+    <div class="description">
+      <div class="work-order-list-row" >
+        <div class="work-order-list-location-icon"></div>
+        <div class="work-order-list-content osr">
+          {{ workOrder.data.route }}<br>
+          {{ workOrder.data.postalcode}}
+        </div>
+      </div>
+
+      <div class="work-order-list-row">
+        <div class="work-order-list-time-icon"></div>
+        <div class="work-order-list-date-text osb">Target Finish Date:<br>Target Finish Time:</div>
+        <div class="work-order-list-date osr">
+          {{ workOrder.data.targetFinishDate | date:'dd/MM/yyyy' }}<br>
+          {{ workOrder.data.targetFinishDate | date:'HH:mm' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
